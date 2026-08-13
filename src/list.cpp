@@ -1,10 +1,9 @@
 #include "include/list.h"
 
-
 void List::print_menu() {
   int choice;
 
-  cout << "********************\n";
+  cout << "\n********************\n";
   cout << " 1 - Print List.\n";
   cout << " 2 - Add to list.\n";
   cout << " 3 - Delete from list.\n";
@@ -43,15 +42,23 @@ void List::add_item() {
 
 void List::delete_item() {
   cout << "\n*** Delete Item ***\n";
-  cout << "Select an item index number to delete\n";
+  cout << "Select an item index number to delete.\n";
 
   if (list.size()) {
     for (unsigned long int i = 0; i < list.size(); i++) {
       cout << i << ": " << list[i] << endl;
     }
+
+    int choiceNum;
+    cin >> choiceNum;
+
+    list.erase(list.begin() + choiceNum);
+
   } else {
     cout << "No items in the list to delete.\n";
   }
+
+  print_menu();
 }
 
 void List::print_list() {
