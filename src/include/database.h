@@ -8,17 +8,16 @@
 using namespace std;
 
 class Database {
-private:
-protected:
-public:
-  Database() {}
-  ~Database() {}
+  private:
+  protected:
+  public:
+    Database() {}
+    ~Database() {}
 
-  vector<vector<string>> mainList;
-  string name;
+    string name;
 
-  vector<vector<string>> read();
-  void write(vector<vector<string>> mainList);
+    vector<vector<string>> read();
+    void write(vector<vector<string>> mainList);
 };
 
 #endif
