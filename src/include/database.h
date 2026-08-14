@@ -7,6 +7,10 @@
 
 using namespace std;
 
+/**
+ * @brief The Database class provides functions to access
+ * data stored in an external data file.
+ */
 class Database {
   private:
   protected:

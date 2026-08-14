@@ -3,7 +3,6 @@ dog
 cat
 mouse
 bird
-bee
 %
 #Mary
 bird

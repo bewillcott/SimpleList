@@ -3,8 +3,14 @@
 
 #include "database.h"
 
+/**
+ * @brief The List class stores the active user list,
+ * and provides functions to process that list.
+ */
 class List {
   private:
+    unsigned long getNum();
+
   protected:
   public:
     List() {}
