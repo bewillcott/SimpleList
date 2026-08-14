@@ -1,7 +1,5 @@
 #include "include/list.h"
 
-// TODO: Finish the tutorial.
-
 int main(int arg_count, char* args[]) {
     List simpleList;
 
