@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 class List {
@@ -12,6 +13,7 @@ public:
   List() {}
   ~List() {}
 
+  vector<vector<string>> mainList;
   vector<string> list;
   string name;
 
@@ -19,6 +21,7 @@ public:
   void print_list();
   void add_item();
   void delete_item();
+  void find_userList();
 };
 
 #endif

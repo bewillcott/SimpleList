@@ -13,7 +13,7 @@ void List::print_menu() {
   cin >> choice;
 
   if (choice == 4) {
-    exit(0);
+    return;
   } else if (choice == 3) {
     delete_item();
   } else if (choice == 2) {
@@ -64,7 +64,7 @@ void List::delete_item() {
 void List::print_list() {
   cout << "\n*** Printing List ***\n";
 
-  for (unsigned long int idx = 0; idx < list.size(); idx++) {
+  for (unsigned long int idx = 1; idx < list.size(); idx++) {
     cout << " " << idx << " " << list[idx] << "\n";
   }
 
@@ -76,5 +76,22 @@ void List::print_list() {
     print_menu();
   } else {
     cout << "Invalid Choice. Quitting.\n";
+  }
+}
+
+void List::find_userList() {
+  bool userFound = false;
+
+  cout << "\n*** Welcome " << name << " ***\n";
+
+  for (unsigned int user_idx = 0; user_idx < mainList.size(); user_idx++) {
+    cout << mainList[user_idx][0] << "\n";
+
+    if(mainList[user_idx][0] == name){
+      cout << "User has been found: " << mainList[user_idx][0] << "\n";
+      list = mainList[user_idx];
+      userFound = true;
+      break;
+    }
   }
 }
